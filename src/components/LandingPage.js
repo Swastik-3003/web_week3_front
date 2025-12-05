@@ -20,7 +20,7 @@ const LandingPage = (props) => {
         
 
 
-        fetch(`https://webweek3back-production.up.railway.app/api/${userName}/home`,{
+        fetch(`https://snippethubback.vercel.app/api/${userName}/home`,{
           method: 'GET'
         }).then(res => res.json())
           .then(data => {
@@ -67,7 +67,7 @@ const LandingPage = (props) => {
         setloading(true);
     try{
         e.preventDefault();
-        fetch(`https://webweek3back-production.up.railway.app/api/users/${userName}/${pass}`,{
+        fetch(`https://snippethubback.vercel.app/api/users/${userName}/${pass}`,{
             method:'GET',
           
             headers:{
@@ -93,7 +93,7 @@ const LandingPage = (props) => {
         const u = userName;
       
         try {
-          const res = await fetch(`https://webweek3back-production.up.railway.app/api/${id}`, {
+          const res = await fetch(`https://snippethubback.vercel.app/api/${id}`, {
             method: 'DELETE'
           });
       
@@ -117,7 +117,7 @@ const LandingPage = (props) => {
           const u = userName;
           const g = e.target.closest('.group').innerText;
       
-          const res = await fetch(`https://webweek3back-production.up.railway.app/api/${u}/${g}`, {
+          const res = await fetch(`https://snippethubback.vercel.app/api/${u}/${g}`, {
             method: 'DELETE'
           });
       
@@ -200,7 +200,7 @@ const LandingPage = (props) => {
             }
         }
         try{
-        fetch(`https://webweek3back-production.up.railway.app/api/${id}`,
+        fetch(`https://snippethubback.vercel.app/api/${id}`,
             {method:'PUT',
             headers:{
                 'Content-Type':'application/json'
@@ -220,7 +220,7 @@ const LandingPage = (props) => {
         }
     }
     const downSnips = async(id,fileName) => {
-        const response = await fetch(`https://webweek3back-production.up.railway.app/api/download/${id}`);
+        const response = await fetch(`https://snippethubback.vercel.app/api/download/${id}`);
 
         if(!response.ok){
             return window.alert('Failed to download'); 
@@ -239,7 +239,7 @@ const LandingPage = (props) => {
     const [newEmail,setNewEmail] = useState('');
     const newUserCreate = async (newUser,newPass,newEmail) => {
         try {
-            const response = await fetch('https://webweek3back-production.up.railway.app/api/signup', {
+            const response = await fetch('https://snippethubback.vercel.app/api/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -280,7 +280,7 @@ const LandingPage = (props) => {
     const snipCreate = async (title, group, language) => {
         setloading(true);
         try {
-          const rep = await fetch(`https://webweek3back-production.up.railway.app/api/new/${userName}`, {
+          const rep = await fetch(`https://snippethubback.vercel.app/api/new/${userName}`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
