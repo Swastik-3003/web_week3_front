@@ -6,7 +6,7 @@ const Forgot = (props) => {
         e.preventDefault();
         const em = email;
         try{
-            const resp = await fetch('https://webweek3back-production.up.railway.app/api/forgot',{
+            const resp = await fetch('https://snippethubback.vercel.app/api/forgot',{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'
