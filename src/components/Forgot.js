@@ -6,7 +6,7 @@ const Forgot = (props) => {
         e.preventDefault();
         const em = email;
         try{
-            const resp = await fetch('https://snippethubback.vercel.app/api/forgot',{
+            const resp = await fetch('https://snippet-hub-back.onrender.com/api/forgot',{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'
